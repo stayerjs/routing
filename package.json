@@ -1,6 +1,6 @@
 {
   "name": "@stayer/routing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Routing module of the Stayer framework.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,6 +14,6 @@
     "typescript": "^2.7.1"
   },
   "dependencies": {
-    "@stayer/interfaces": "0.0.3"
+    "@stayer/interfaces": "0.0.5"
   }
 }
