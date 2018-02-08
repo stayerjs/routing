@@ -10,6 +10,10 @@
   },
   "author": "Anton Bakhurynskyi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stayerjs/routing.git"
+  },
   "devDependencies": {
     "typescript": "^2.7.1"
   },
