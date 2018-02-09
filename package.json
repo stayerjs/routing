@@ -18,6 +18,7 @@
     "typescript": "^2.7.1"
   },
   "dependencies": {
-    "@stayer/interfaces": "0.0.5"
+    "@stayer/interfaces": "0.0.6",
+    "reflect-metadata": "^0.1.12"
   }
 }

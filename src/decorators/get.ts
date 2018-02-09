@@ -1,9 +1,11 @@
 import { Endpoint, HttpMethod } from '@stayer/interfaces';
 
-import endpointRegister from './endpoint-register';
+import MethodDecorator from '../interfaces/method-decorator';
+import decoratorFactory from '../endpoint/decorator-factory';
+//import endpointRegister from './endpoint/endpoint-register';
 
-export default function Get(route: string) {
-  return (target: any, propertyName: string): void => {
+export default function Get(route: string): MethodDecorator {
+  /*return (target: any, propertyName: string): void => {
     let service: Function;
     let serviceName: string;
     if (target instanceof Function) {
@@ -19,5 +21,6 @@ export default function Get(route: string) {
       service: service,
     }
     endpointRegister.push(endpoint);
-  }
+  }*/
+  return decoratorFactory(HttpMethod.GET, route);
 }
