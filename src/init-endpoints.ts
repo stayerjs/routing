@@ -1,6 +1,4 @@
-import { Endpoint } from '@stayer/interfaces';
-
-import Injector from './injector-interface';
+import { Endpoint, Injector } from '@stayer/interfaces';
 
 import endpointRegister from './endpoint/endpoint-register';
 import serviceRegister from './service/service-register';
@@ -12,5 +10,14 @@ export default function initEndpoints(
   for (const record of serviceRegister) {
     injector.inject(record.constructor, record.dependencies);
   }
-  return endpointRegister;
+  const endpoints: Endpoint[] = [];
+  for (const record of endpointRegister) {
+    const endpoint: Endpoint = {
+      method: record.method,
+      route: record.route,
+      propertyName: record.propertyName,
+      service: injector.getInstance(record.service),
+    };
+  }
+  return endpoints;
 }
