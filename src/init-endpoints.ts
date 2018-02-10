@@ -18,6 +18,7 @@ export default function initEndpoints(
       propertyName: record.propertyName,
       service: injector.getInstance(record.service),
     };
+    endpoints.push(endpoint);
   }
   return endpoints;
 }
