@@ -43,8 +43,8 @@ async myEndpoint(req, res, body, query) {
   return await { foo: 'bar' };
 }
 
-- req: Request - a Node.js Request object;
-- res: Request - a Node.js Response object;
+- req: IncominMessage - a Node.js request object;
+- res: ServerResponse - a Node.js response object;
 - body?: object - a JSON-parsed request body, can be undefined;
 - query?: object - parsed URL-query, can be undefined.
 
