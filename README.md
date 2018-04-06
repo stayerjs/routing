@@ -28,13 +28,13 @@ export class SomeService {
 }
 ```
 
-##Public API
+## Public API
 
 - Service() - a service class decorator. All classes containing endpoint decorators must be marked as ```@Service()```.
 
-- Get(route: string) - a GET endpoint method decorator. Will be available via HTTP with your server base URL (in our example for all items: http://localhost:3000/items).
+- Get(route: string) - a GET endpoint method decorator. Will be available via HTTP with your server base URL (in our example for all items: ```http://localhost:3000/items```).
 
-- Post(route: string) - a POST endpoint method decorator. Will be available via HTTP with your server base URL (in our example for new item: http://localhost:3000/item (POST)).
+- Post(route: string) - a POST endpoint method decorator. Will be available via HTTP with your server base URL (in our example for new item: ```http://localhost:3000/item``` (POST)).
 
 All endpoint methods accept 4 parameters:
 
